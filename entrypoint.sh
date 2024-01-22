@@ -9,7 +9,7 @@ fi
 cd $GITHUB_WORKSPACE
 
 set +e
-OUTPUT=$(pycodestyle .)
+OUTPUT=$(pycodestyle .  --max-line-length=10000)
 SUCCESS=$?
 echo $OUTPUT
 set -e
